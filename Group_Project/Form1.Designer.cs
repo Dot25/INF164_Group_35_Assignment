@@ -1,6 +1,6 @@
 ﻿namespace Group_Project
 {
-    partial class Form1
+    partial class pnlMainGameForm
     {
         /// <summary>
         /// Required designer variable.
@@ -38,13 +38,13 @@
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 0;
             // 
-            // Form1
+            // pnlMainGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textBox1);
-            this.Name = "Form1";
+            this.Name = "pnlMainGameForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
