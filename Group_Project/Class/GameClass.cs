@@ -11,6 +11,6 @@ namespace Group_Project.Class
     [Serializable]
     internal class GameClass
     {
-
+        
     }
 }
