@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Collections;
 
 namespace Group_Project.Class
 {
+    [Serializable]
     internal class GameClass
     {
+
     }
 }

@@ -29,11 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.iml = new System.Windows.Forms.ImageList(this.components);
+            this.SuspendLayout();
+            // 
+            // iml
+            // 
+            this.iml.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.iml.ImageSize = new System.Drawing.Size(16, 16);
+            this.iml.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // MainGameForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "MainGameForm";
             this.Text = "MainGameForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ImageList iml;
     }
 }
