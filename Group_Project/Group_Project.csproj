@@ -135,8 +135,27 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Images\" />
+    <Content Include="Images\background_1.jpg" />
+    <Content Include="Images\background_2.jpg" />
+    <Content Include="Images\background_3.jpg" />
+    <Content Include="Images\background_4.png" />
+    <Content Include="Images\background_5.jpg" />
+    <Content Include="Images\bedrock 750x750.png" />
+    <Content Include="Images\coal_750_750.jpeg" />
+    <Content Include="Images\copper_750x750.jpg" />
+    <Content Include="Images\diamond_750x750.png" />
+    <Content Include="Images\dirt_750x750.jpeg" />
+    <Content Include="Images\emerald_750_750.jpg" />
+    <Content Include="Images\gold_750x750.jpg" />
+    <Content Include="Images\iron_750x750.jpeg" />
+    <Content Include="Images\obsidian_750x750.jpg" />
+    <Content Include="Images\output-onlinepngtools.png" />
+    <Content Include="Images\portrait wallpaper.jpeg" />
+    <Content Include="Images\sand_750x750.jpeg" />
+    <Content Include="Images\stone_750x750.jpeg" />
+    <Content Include="Images\welcome background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

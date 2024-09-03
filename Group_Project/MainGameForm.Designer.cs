@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.iml = new System.Windows.Forms.ImageList(this.components);
+            this.imageListBackground = new System.Windows.Forms.ImageList(this.components);
             this.lblWord = new System.Windows.Forms.Label();
             this.btnMine = new System.Windows.Forms.Button();
             this.txtInput = new System.Windows.Forms.TextBox();
             this.pbxOre = new System.Windows.Forms.PictureBox();
             this.pbxAxe = new System.Windows.Forms.PictureBox();
+            this.imageListBlocks = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbxOre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAxe)).BeginInit();
             this.SuspendLayout();
             // 
-            // iml
+            // imageListBackground
             // 
-            this.iml.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.iml.ImageSize = new System.Drawing.Size(16, 16);
-            this.iml.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListBackground.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageListBackground.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageListBackground.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // lblWord
             // 
@@ -85,6 +86,12 @@
             this.pbxAxe.TabIndex = 4;
             this.pbxAxe.TabStop = false;
             // 
+            // imageListBlocks
+            // 
+            this.imageListBlocks.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageListBlocks.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageListBlocks.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // MainGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -106,11 +113,12 @@
 
         #endregion
 
-        private System.Windows.Forms.ImageList iml;
+        private System.Windows.Forms.ImageList imageListBackground;
         private System.Windows.Forms.Label lblWord;
         private System.Windows.Forms.Button btnMine;
         private System.Windows.Forms.TextBox txtInput;
         private System.Windows.Forms.PictureBox pbxOre;
         private System.Windows.Forms.PictureBox pbxAxe;
+        private System.Windows.Forms.ImageList imageListBlocks;
     }
 }
