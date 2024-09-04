@@ -151,6 +151,7 @@
     <Content Include="Images\emerald_750_750.jpg" />
     <Content Include="Images\gold_750x750.jpg" />
     <Content Include="Images\iron_750x750.jpeg" />
+    <Content Include="Images\LOGO.png" />
     <Content Include="Images\obsidian_750x750.jpg" />
     <Content Include="Images\output-onlinepngtools.png" />
     <Content Include="Images\portrait wallpaper.jpeg" />

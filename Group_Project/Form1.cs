@@ -22,5 +22,11 @@ namespace Group_Project
         {
 
         }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+        }
     }
 }

@@ -33,6 +33,8 @@
             this.btnInstructions = new System.Windows.Forms.Button();
             this.btnMusic = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.pbxLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPlay
@@ -43,6 +45,7 @@
             this.btnPlay.TabIndex = 0;
             this.btnPlay.Text = "Play";
             this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // btnInstructions
             // 
@@ -71,6 +74,17 @@
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             // 
+            // pbxLogo
+            // 
+            this.pbxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbxLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxLogo.BackgroundImage")));
+            this.pbxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbxLogo.Location = new System.Drawing.Point(61, 0);
+            this.pbxLogo.Name = "pbxLogo";
+            this.pbxLogo.Size = new System.Drawing.Size(666, 168);
+            this.pbxLogo.TabIndex = 4;
+            this.pbxLogo.TabStop = false;
+            // 
             // pnlWelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -78,6 +92,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnMusic);
             this.Controls.Add(this.btnInstructions);
@@ -85,6 +100,7 @@
             this.Name = "pnlWelcomeForm";
             this.Text = "Welcome Form";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -95,6 +111,7 @@
         private System.Windows.Forms.Button btnInstructions;
         private System.Windows.Forms.Button btnMusic;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.PictureBox pbxLogo;
     }
 }
 
