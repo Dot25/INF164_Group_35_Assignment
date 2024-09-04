@@ -36,7 +36,7 @@
             // 
             // btnPlay
             // 
-            this.btnPlay.Location = new System.Drawing.Point(279, 156);
+            this.btnPlay.Location = new System.Drawing.Point(304, 174);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(181, 41);
             this.btnPlay.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // btnInstructions
             // 
-            this.btnInstructions.Location = new System.Drawing.Point(279, 238);
+            this.btnInstructions.Location = new System.Drawing.Point(304, 238);
             this.btnInstructions.Name = "btnInstructions";
             this.btnInstructions.Size = new System.Drawing.Size(181, 41);
             this.btnInstructions.TabIndex = 1;
@@ -54,7 +54,7 @@
             // 
             // btnMusic
             // 
-            this.btnMusic.Location = new System.Drawing.Point(279, 307);
+            this.btnMusic.Location = new System.Drawing.Point(304, 307);
             this.btnMusic.Name = "btnMusic";
             this.btnMusic.Size = new System.Drawing.Size(181, 41);
             this.btnMusic.TabIndex = 2;
@@ -63,7 +63,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(279, 368);
+            this.btnExit.Location = new System.Drawing.Point(304, 368);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(181, 41);
             this.btnExit.TabIndex = 3;
@@ -74,6 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnMusic);
