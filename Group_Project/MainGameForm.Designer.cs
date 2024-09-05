@@ -37,15 +37,20 @@
             this.pbxOre = new System.Windows.Forms.PictureBox();
             this.pbxAxe = new System.Windows.Forms.PictureBox();
             this.imageListBlocks = new System.Windows.Forms.ImageList(this.components);
+            this.tmrCountdown = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbxOre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAxe)).BeginInit();
             this.SuspendLayout();
             // 
             // imageListBackground
             // 
-            this.imageListBackground.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageListBackground.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageListBackground.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListBackground.ImageStream")));
             this.imageListBackground.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListBackground.Images.SetKeyName(0, "background_1.jpg");
+            this.imageListBackground.Images.SetKeyName(1, "background_2.jpg");
+            this.imageListBackground.Images.SetKeyName(2, "background_3.jpg");
+            this.imageListBackground.Images.SetKeyName(3, "background_4.png");
+            this.imageListBackground.Images.SetKeyName(4, "background_5.jpg");
             // 
             // lblWord
             // 
@@ -63,6 +68,7 @@
             this.btnMine.TabIndex = 1;
             this.btnMine.Text = "Mine";
             this.btnMine.UseVisualStyleBackColor = true;
+            this.btnMine.Click += new System.EventHandler(this.btnMine_Click);
             // 
             // txtInput
             // 
@@ -70,6 +76,7 @@
             this.txtInput.Name = "txtInput";
             this.txtInput.Size = new System.Drawing.Size(193, 22);
             this.txtInput.TabIndex = 2;
+            this.txtInput.TextChanged += new System.EventHandler(this.txtInput_TextChanged);
             // 
             // pbxOre
             // 
@@ -89,9 +96,24 @@
             // 
             // imageListBlocks
             // 
-            this.imageListBlocks.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageListBlocks.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageListBlocks.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListBlocks.ImageStream")));
             this.imageListBlocks.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListBlocks.Images.SetKeyName(0, "dirt_750x750.jpeg");
+            this.imageListBlocks.Images.SetKeyName(1, "sand_750x750.jpeg");
+            this.imageListBlocks.Images.SetKeyName(2, "stone_750x750.jpeg");
+            this.imageListBlocks.Images.SetKeyName(3, "coal_750_750.jpeg");
+            this.imageListBlocks.Images.SetKeyName(4, "copper_750x750.jpg");
+            this.imageListBlocks.Images.SetKeyName(5, "iron_750x750.jpeg");
+            this.imageListBlocks.Images.SetKeyName(6, "gold_750x750.jpg");
+            this.imageListBlocks.Images.SetKeyName(7, "emerald_750_750.jpg");
+            this.imageListBlocks.Images.SetKeyName(8, "diamond_750x750.png");
+            this.imageListBlocks.Images.SetKeyName(9, "obsidian_750x750.jpg");
+            this.imageListBlocks.Images.SetKeyName(10, "bedrock 750x750.png");
+            // 
+            // tmrCountdown
+            // 
+            this.tmrCountdown.Interval = 1000;
+            this.tmrCountdown.Tick += new System.EventHandler(this.tmrCountdown_Tick);
             // 
             // MainGameForm
             // 
@@ -122,5 +144,6 @@
         private System.Windows.Forms.PictureBox pbxOre;
         private System.Windows.Forms.PictureBox pbxAxe;
         private System.Windows.Forms.ImageList imageListBlocks;
+        private System.Windows.Forms.Timer tmrCountdown;
     }
 }

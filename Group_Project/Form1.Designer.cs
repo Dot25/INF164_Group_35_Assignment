@@ -55,6 +55,7 @@
             this.btnInstructions.TabIndex = 1;
             this.btnInstructions.Text = "Instructions";
             this.btnInstructions.UseVisualStyleBackColor = true;
+            this.btnInstructions.Click += new System.EventHandler(this.btnInstructions_Click);
             // 
             // btnMusic
             // 
@@ -64,6 +65,7 @@
             this.btnMusic.TabIndex = 2;
             this.btnMusic.Text = "Music On";
             this.btnMusic.UseVisualStyleBackColor = true;
+            this.btnMusic.Click += new System.EventHandler(this.btnMusic_Click);
             // 
             // btnExit
             // 
@@ -73,6 +75,7 @@
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // pbxLogo
             // 

@@ -158,6 +158,7 @@
     <Content Include="Images\sand_750x750.jpeg" />
     <Content Include="Images\stone_750x750.jpeg" />
     <Content Include="Images\welcome background.jpg" />
+    <None Include="Music\fellowship.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
