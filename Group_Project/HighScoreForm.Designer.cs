@@ -37,31 +37,34 @@
             // dgvHighScores
             // 
             this.dgvHighScores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHighScores.Location = new System.Drawing.Point(185, 65);
+            this.dgvHighScores.Location = new System.Drawing.Point(139, 53);
+            this.dgvHighScores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvHighScores.Name = "dgvHighScores";
             this.dgvHighScores.RowHeadersWidth = 51;
             this.dgvHighScores.RowTemplate.Height = 24;
-            this.dgvHighScores.Size = new System.Drawing.Size(410, 233);
+            this.dgvHighScores.Size = new System.Drawing.Size(308, 189);
             this.dgvHighScores.TabIndex = 0;
             // 
             // btnBestPlayer
             // 
-            this.btnBestPlayer.Location = new System.Drawing.Point(227, 332);
+            this.btnBestPlayer.Location = new System.Drawing.Point(170, 270);
+            this.btnBestPlayer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBestPlayer.Name = "btnBestPlayer";
-            this.btnBestPlayer.Size = new System.Drawing.Size(350, 82);
+            this.btnBestPlayer.Size = new System.Drawing.Size(262, 67);
             this.btnBestPlayer.TabIndex = 1;
             this.btnBestPlayer.Text = "Search for the best player";
             this.btnBestPlayer.UseVisualStyleBackColor = true;
             // 
             // HighScoreForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.btnBestPlayer);
             this.Controls.Add(this.dgvHighScores);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "HighScoreForm";
             this.Text = "HighScoreForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvHighScores)).EndInit();

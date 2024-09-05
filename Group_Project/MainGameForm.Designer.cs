@@ -55,16 +55,18 @@
             // lblWord
             // 
             this.lblWord.BackColor = System.Drawing.Color.White;
-            this.lblWord.Location = new System.Drawing.Point(276, 213);
+            this.lblWord.Location = new System.Drawing.Point(207, 173);
+            this.lblWord.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblWord.Name = "lblWord";
-            this.lblWord.Size = new System.Drawing.Size(205, 50);
+            this.lblWord.Size = new System.Drawing.Size(154, 41);
             this.lblWord.TabIndex = 0;
             // 
             // btnMine
             // 
-            this.btnMine.Location = new System.Drawing.Point(312, 354);
+            this.btnMine.Location = new System.Drawing.Point(237, 288);
+            this.btnMine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMine.Name = "btnMine";
-            this.btnMine.Size = new System.Drawing.Size(127, 60);
+            this.btnMine.Size = new System.Drawing.Size(95, 49);
             this.btnMine.TabIndex = 1;
             this.btnMine.Text = "Mine";
             this.btnMine.UseVisualStyleBackColor = true;
@@ -72,25 +74,31 @@
             // 
             // txtInput
             // 
-            this.txtInput.Location = new System.Drawing.Point(279, 297);
+            this.txtInput.Location = new System.Drawing.Point(211, 241);
+            this.txtInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(193, 22);
+            this.txtInput.Size = new System.Drawing.Size(146, 20);
             this.txtInput.TabIndex = 2;
             this.txtInput.TextChanged += new System.EventHandler(this.txtInput_TextChanged);
             // 
             // pbxOre
             // 
-            this.pbxOre.Location = new System.Drawing.Point(259, 36);
+            this.pbxOre.Location = new System.Drawing.Point(209, 11);
+            this.pbxOre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbxOre.Name = "pbxOre";
-            this.pbxOre.Size = new System.Drawing.Size(232, 147);
+            this.pbxOre.Size = new System.Drawing.Size(150, 150);
             this.pbxOre.TabIndex = 3;
             this.pbxOre.TabStop = false;
             // 
             // pbxAxe
             // 
-            this.pbxAxe.Location = new System.Drawing.Point(614, 56);
+            this.pbxAxe.BackColor = System.Drawing.Color.Transparent;
+            this.pbxAxe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxAxe.BackgroundImage")));
+            this.pbxAxe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbxAxe.Location = new System.Drawing.Point(403, 50);
+            this.pbxAxe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbxAxe.Name = "pbxAxe";
-            this.pbxAxe.Size = new System.Drawing.Size(112, 108);
+            this.pbxAxe.Size = new System.Drawing.Size(84, 84);
             this.pbxAxe.TabIndex = 4;
             this.pbxAxe.TabStop = false;
             // 
@@ -117,15 +125,16 @@
             // 
             // MainGameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.pbxAxe);
             this.Controls.Add(this.pbxOre);
             this.Controls.Add(this.txtInput);
             this.Controls.Add(this.btnMine);
             this.Controls.Add(this.lblWord);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainGameForm";
             this.Text = "MainGameForm";
             ((System.ComponentModel.ISupportInitialize)(this.pbxOre)).EndInit();
