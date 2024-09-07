@@ -12,10 +12,14 @@ namespace Group_Project
 {
     public partial class MainGameForm : Form
     {
+
+        ImageList.ImageCollection ImagesBlocks;
+
         public MainGameForm()
         {
             InitializeComponent();
             pbxOre.Image = imageListBlocks.Images[0];
+            pbxOre.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         int timeElapsed = 0;

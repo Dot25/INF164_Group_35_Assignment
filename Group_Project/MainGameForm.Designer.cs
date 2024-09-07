@@ -55,18 +55,17 @@
             // lblWord
             // 
             this.lblWord.BackColor = System.Drawing.Color.White;
-            this.lblWord.Location = new System.Drawing.Point(207, 173);
-            this.lblWord.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWord.Location = new System.Drawing.Point(276, 213);
             this.lblWord.Name = "lblWord";
-            this.lblWord.Size = new System.Drawing.Size(154, 41);
+            this.lblWord.Size = new System.Drawing.Size(205, 50);
             this.lblWord.TabIndex = 0;
             // 
             // btnMine
             // 
-            this.btnMine.Location = new System.Drawing.Point(237, 288);
-            this.btnMine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMine.Location = new System.Drawing.Point(315, 354);
+            this.btnMine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMine.Name = "btnMine";
-            this.btnMine.Size = new System.Drawing.Size(95, 49);
+            this.btnMine.Size = new System.Drawing.Size(127, 60);
             this.btnMine.TabIndex = 1;
             this.btnMine.Text = "Mine";
             this.btnMine.UseVisualStyleBackColor = true;
@@ -74,19 +73,23 @@
             // 
             // txtInput
             // 
-            this.txtInput.Location = new System.Drawing.Point(211, 241);
-            this.txtInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtInput.Location = new System.Drawing.Point(282, 297);
+            this.txtInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(146, 20);
+            this.txtInput.Size = new System.Drawing.Size(193, 22);
             this.txtInput.TabIndex = 2;
             this.txtInput.TextChanged += new System.EventHandler(this.txtInput_TextChanged);
             // 
             // pbxOre
             // 
-            this.pbxOre.Location = new System.Drawing.Point(209, 11);
-            this.pbxOre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbxOre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxOre.BackgroundImage")));
+            this.pbxOre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbxOre.Image = ((System.Drawing.Image)(resources.GetObject("pbxOre.Image")));
+            this.pbxOre.Location = new System.Drawing.Point(291, 14);
+            this.pbxOre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbxOre.Name = "pbxOre";
-            this.pbxOre.Size = new System.Drawing.Size(150, 150);
+            this.pbxOre.Size = new System.Drawing.Size(175, 175);
+            this.pbxOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxOre.TabIndex = 3;
             this.pbxOre.TabStop = false;
             // 
@@ -95,10 +98,10 @@
             this.pbxAxe.BackColor = System.Drawing.Color.Transparent;
             this.pbxAxe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxAxe.BackgroundImage")));
             this.pbxAxe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbxAxe.Location = new System.Drawing.Point(403, 50);
-            this.pbxAxe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbxAxe.Location = new System.Drawing.Point(537, 62);
+            this.pbxAxe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbxAxe.Name = "pbxAxe";
-            this.pbxAxe.Size = new System.Drawing.Size(84, 84);
+            this.pbxAxe.Size = new System.Drawing.Size(112, 103);
             this.pbxAxe.TabIndex = 4;
             this.pbxAxe.TabStop = false;
             // 
@@ -106,17 +109,16 @@
             // 
             this.imageListBlocks.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListBlocks.ImageStream")));
             this.imageListBlocks.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListBlocks.Images.SetKeyName(0, "dirt_750x750.jpeg");
-            this.imageListBlocks.Images.SetKeyName(1, "sand_750x750.jpeg");
-            this.imageListBlocks.Images.SetKeyName(2, "stone_750x750.jpeg");
-            this.imageListBlocks.Images.SetKeyName(3, "coal_750_750.jpeg");
-            this.imageListBlocks.Images.SetKeyName(4, "copper_750x750.jpg");
-            this.imageListBlocks.Images.SetKeyName(5, "iron_750x750.jpeg");
-            this.imageListBlocks.Images.SetKeyName(6, "gold_750x750.jpg");
-            this.imageListBlocks.Images.SetKeyName(7, "emerald_750_750.jpg");
-            this.imageListBlocks.Images.SetKeyName(8, "diamond_750x750.png");
-            this.imageListBlocks.Images.SetKeyName(9, "obsidian_750x750.jpg");
-            this.imageListBlocks.Images.SetKeyName(10, "bedrock 750x750.png");
+            this.imageListBlocks.Images.SetKeyName(0, "sand.jpg");
+            this.imageListBlocks.Images.SetKeyName(1, "dirt.jpg");
+            this.imageListBlocks.Images.SetKeyName(2, "coal.jpg");
+            this.imageListBlocks.Images.SetKeyName(3, "copper.jpg");
+            this.imageListBlocks.Images.SetKeyName(4, "diamond.png");
+            this.imageListBlocks.Images.SetKeyName(5, "emerald.jpg");
+            this.imageListBlocks.Images.SetKeyName(6, "gold.jpg");
+            this.imageListBlocks.Images.SetKeyName(7, "iron.jpg");
+            this.imageListBlocks.Images.SetKeyName(8, "obsidian.jpg");
+            this.imageListBlocks.Images.SetKeyName(9, "stone.jpg");
             // 
             // tmrCountdown
             // 
@@ -125,16 +127,16 @@
             // 
             // MainGameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pbxAxe);
             this.Controls.Add(this.pbxOre);
             this.Controls.Add(this.txtInput);
             this.Controls.Add(this.btnMine);
             this.Controls.Add(this.lblWord);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainGameForm";
             this.Text = "MainGameForm";
             ((System.ComponentModel.ISupportInitialize)(this.pbxOre)).EndInit();
