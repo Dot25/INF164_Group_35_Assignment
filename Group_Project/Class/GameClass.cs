@@ -23,6 +23,7 @@ namespace Group_Project.Class
         private int[] exp = new int[9] {3,6,9,12,15,18,21,24,27};
         private int totalExp = 0;
         private int durability = 5;
+        private int numBlocksBroken = 0;
 
         public GameClass()
         {
@@ -35,7 +36,7 @@ namespace Group_Project.Class
         {
             try
             {
-                StreamReader reader = new StreamReader("C:/Users/makha/source/repos/INF164_Group_35_Assignment/Group_Project/Resources/Cat.txt");
+                StreamReader reader = new StreamReader("Resources/Cat.txt");
                 {
                     string line;
                     while ((line = reader.ReadLine()) != null)
@@ -88,6 +89,7 @@ namespace Group_Project.Class
         public void addExp()
         {
             totalExp += exp[picture];
+            ++numBlocksBroken;
         }
 
         public bool removeDurability()
@@ -101,7 +103,6 @@ namespace Group_Project.Class
             {
                 return false;
             }
-            
         }
 
         public string GetRandomWord()

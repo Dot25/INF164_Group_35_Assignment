@@ -38,6 +38,8 @@
             this.pbxAxe = new System.Windows.Forms.PictureBox();
             this.imageListBlocks = new System.Windows.Forms.ImageList(this.components);
             this.tmrCountdown = new System.Windows.Forms.Timer(this.components);
+            this.lblDurability = new System.Windows.Forms.Label();
+            this.lblExp = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxOre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAxe)).BeginInit();
             this.SuspendLayout();
@@ -128,12 +130,32 @@
             this.tmrCountdown.Interval = 1000;
             this.tmrCountdown.Tick += new System.EventHandler(this.tmrCountdown_Tick);
             // 
+            // lblDurability
+            // 
+            this.lblDurability.AutoSize = true;
+            this.lblDurability.Location = new System.Drawing.Point(623, 216);
+            this.lblDurability.Name = "lblDurability";
+            this.lblDurability.Size = new System.Drawing.Size(44, 16);
+            this.lblDurability.TabIndex = 5;
+            this.lblDurability.Text = "label1";
+            // 
+            // lblExp
+            // 
+            this.lblExp.AutoSize = true;
+            this.lblExp.Location = new System.Drawing.Point(110, 82);
+            this.lblExp.Name = "lblExp";
+            this.lblExp.Size = new System.Drawing.Size(44, 16);
+            this.lblExp.TabIndex = 6;
+            this.lblExp.Text = "label2";
+            // 
             // MainGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblExp);
+            this.Controls.Add(this.lblDurability);
             this.Controls.Add(this.pbxAxe);
             this.Controls.Add(this.pbxOre);
             this.Controls.Add(this.txtInput);
@@ -159,5 +181,7 @@
         private System.Windows.Forms.PictureBox pbxAxe;
         private System.Windows.Forms.ImageList imageListBlocks;
         private System.Windows.Forms.Timer tmrCountdown;
+        private System.Windows.Forms.Label lblDurability;
+        private System.Windows.Forms.Label lblExp;
     }
 }
