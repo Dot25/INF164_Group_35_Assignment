@@ -103,7 +103,7 @@
             this.pbxAxe.BackColor = System.Drawing.Color.Transparent;
             this.pbxAxe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxAxe.BackgroundImage")));
             this.pbxAxe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbxAxe.Location = new System.Drawing.Point(537, 62);
+            this.pbxAxe.Location = new System.Drawing.Point(544, 14);
             this.pbxAxe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbxAxe.Name = "pbxAxe";
             this.pbxAxe.Size = new System.Drawing.Size(112, 103);
@@ -133,20 +133,25 @@
             // lblDurability
             // 
             this.lblDurability.AutoSize = true;
-            this.lblDurability.Location = new System.Drawing.Point(623, 216);
+            this.lblDurability.BackColor = System.Drawing.Color.Transparent;
+            this.lblDurability.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDurability.Location = new System.Drawing.Point(530, 134);
             this.lblDurability.Name = "lblDurability";
-            this.lblDurability.Size = new System.Drawing.Size(44, 16);
+            this.lblDurability.Size = new System.Drawing.Size(146, 25);
             this.lblDurability.TabIndex = 5;
-            this.lblDurability.Text = "label1";
+            this.lblDurability.Text = "Durability: 5/5";
             // 
             // lblExp
             // 
             this.lblExp.AutoSize = true;
-            this.lblExp.Location = new System.Drawing.Point(110, 82);
+            this.lblExp.BackColor = System.Drawing.Color.Transparent;
+            this.lblExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExp.Location = new System.Drawing.Point(68, 134);
             this.lblExp.Name = "lblExp";
-            this.lblExp.Size = new System.Drawing.Size(44, 16);
+            this.lblExp.Size = new System.Drawing.Size(143, 25);
             this.lblExp.TabIndex = 6;
-            this.lblExp.Text = "label2";
+            this.lblExp.Text = "EXP Gained: \r\n";
+            this.lblExp.Click += new System.EventHandler(this.lblExp_Click);
             // 
             // MainGameForm
             // 

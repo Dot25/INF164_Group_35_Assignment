@@ -67,5 +67,10 @@ namespace Group_Project
         {
 
         }
+
+        private void lblExp_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
