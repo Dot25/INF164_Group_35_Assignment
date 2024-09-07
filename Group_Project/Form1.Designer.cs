@@ -34,6 +34,7 @@
             this.btnMusic = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
+            this.btnMusicOff = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,6 +89,16 @@
             this.pbxLogo.TabIndex = 4;
             this.pbxLogo.TabStop = false;
             // 
+            // btnMusicOff
+            // 
+            this.btnMusicOff.Location = new System.Drawing.Point(304, 307);
+            this.btnMusicOff.Name = "btnMusicOff";
+            this.btnMusicOff.Size = new System.Drawing.Size(181, 41);
+            this.btnMusicOff.TabIndex = 5;
+            this.btnMusicOff.Text = "Music Off";
+            this.btnMusicOff.UseVisualStyleBackColor = true;
+            this.btnMusicOff.Click += new System.EventHandler(this.btnMusicOff_Click);
+            // 
             // pnlWelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -95,6 +106,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMusicOff);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnMusic);
@@ -115,6 +127,7 @@
         private System.Windows.Forms.Button btnMusic;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.PictureBox pbxLogo;
+        private System.Windows.Forms.Button btnMusicOff;
     }
 }
 

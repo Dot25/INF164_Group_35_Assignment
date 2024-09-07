@@ -15,7 +15,7 @@ namespace Group_Project
 {
     public partial class pnlWelcomeForm : Form
     {
-        
+        SoundPlayer audio = new SoundPlayer(Group_Project.Properties.Resources.fellowship);
         public pnlWelcomeForm()
         {
             InitializeComponent();
@@ -25,9 +25,11 @@ namespace Group_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SoundPlayer audio = new SoundPlayer(Group_Project.Properties.Resources.fellowship);
+            
             audio.PlayLooping();
-            btnMusic.Text = "Music Off";
+            btnMusicOff.BackColor = Color.Red;
+            btnMusic.BackColor = Color.Green;
+            
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
@@ -40,13 +42,12 @@ namespace Group_Project
 
         private void btnMusic_Click(object sender, EventArgs e)
         {
-            SoundPlayer audio = new SoundPlayer(Group_Project.Properties.Resources.fellowship); 
+            
             audio.PlayLooping();
-            //Changes the button's text
+            btnMusic.Hide();
+            btnMusicOff.Show();
             
-
             
-
         }
 
         private void btnInstructions_Click(object sender, EventArgs e)
@@ -59,6 +60,13 @@ namespace Group_Project
           
             this.Close();
             
+        }
+
+        private void btnMusicOff_Click(object sender, EventArgs e)
+        {
+            audio.Stop();
+            btnMusicOff.Hide();
+            btnMusic.Show();
         }
     }
 }
