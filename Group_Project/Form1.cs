@@ -20,19 +20,14 @@ namespace Group_Project
         {
             InitializeComponent();
 
-            
-            
-            
-
-            
-
-
-
+        
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            SoundPlayer audio = new SoundPlayer(Group_Project.Properties.Resources.fellowship);
+            audio.PlayLooping();
+            btnMusic.Text = "Music Off";
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
@@ -47,6 +42,9 @@ namespace Group_Project
         {
             SoundPlayer audio = new SoundPlayer(Group_Project.Properties.Resources.fellowship); 
             audio.PlayLooping();
+            //Changes the button's text
+            
+
             
 
         }
