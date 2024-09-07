@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Collections;
 
+
 namespace Group_Project.Class
 {
     [Serializable]
@@ -13,15 +14,25 @@ namespace Group_Project.Class
     {
         private List<string> _words;
         private Random _random;
+        private string _filepath;
 
         public GameClass()
         {
             _words = new List<string>();
             _random = new Random();
+            _filepath = @""
         }
         public void AddWord(string word)
         {
             _words.Add(word);
+        }
+        public void AddWordsFromFile(string filePath)
+        {
+            string[] words = File.ReadAllLines(filePath);
+            foreach (string word in words)
+            {
+                AddWord(word.Trim());
+            }
         }
         public string GetRandomWord()
         {
