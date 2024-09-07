@@ -22,22 +22,19 @@ namespace Group_Project
         private void LoadInstructions()
         {
 
-
-            
             try
             {
-                //using (Stream stream = Properties.Resources.Instructions)
-                //using (StreamReader reader = new StreamReader(stream))
+                
                 {
                     string fileContent = Properties.Resources.Instructions;
 
-                    // Display the contents in the RichTextBox
+                    // Displays the contents in the RichTextBox
                     rtbInstructions.Text = fileContent;
                 }
             }
             catch (Exception ex)
             {
-                // Handle exceptions (e.g., file not found, access denied)
+                // Exceptions Handling
                 MessageBox.Show($"An error occurred while loading the instructions: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
