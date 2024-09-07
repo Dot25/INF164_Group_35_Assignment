@@ -34,6 +34,7 @@ namespace Group_Project
             if(obj.equal(txtInput.Text) == true)
             {
                 obj.addExp();
+                lblExp.Text = "EXP Gained: " + obj.getExp().ToString();
                 lblWord.Text = obj.GetRandomWord();
                 //MessageBox.Show("1");
             }
@@ -48,6 +49,7 @@ namespace Group_Project
                 else
                 {
                     lblWord.Text = obj.GetRandomWord();
+                    lblDurability.Text = "Durability: " + obj.getDurability().ToString() + "/5";
                 }
             }
             

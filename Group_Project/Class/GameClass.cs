@@ -92,6 +92,16 @@ namespace Group_Project.Class
             ++numBlocksBroken;
         }
 
+        public int getExp()
+        {
+            return totalExp;
+        }
+
+        public int getDurability()
+        {
+            return durability;
+        }
+
         public bool removeDurability()
         {
             if(durability > 0) 
