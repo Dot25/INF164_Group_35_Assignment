@@ -61,6 +61,101 @@ namespace Group_Project.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cat
+        ///Dog
+        ///Box
+        ///Sun
+        ///Hat
+        ///Pen
+        ///Rat
+        ///Cup
+        ///Lip
+        ///Net
+        ///Fox
+        ///Bus
+        ///Map
+        ///Bed
+        ///Sky
+        ///Log
+        ///Fan
+        ///Joy
+        ///Run
+        ///Tap
+        ///Key
+        ///Leg
+        ///Air
+        ///Bee
+        ///Mud
+        ///Pot
+        ///Kit
+        ///Rat
+        ///Zip
+        ///Jam
+        ///Boat
+        ///Cake
+        ///Duck
+        ///Echo
+        ///Fire
+        ///Gold
+        ///Hope
+        ///Joke
+        ///King
+        ///Lamp
+        ///Moon
+        ///Nail
+        ///Oven
+        ///Park
+        ///Quiz
+        ///Rain
+        ///Ship
+        ///Tree
+        ///Unit
+        ///Vast
+        ///Wolf
+        ///Yarn
+        ///Zone
+        ///Golf
+        ///Desk
+        ///Leaf
+        ///Wave
+        ///Rush
+        ///Mint
+        ///Bath
+        ///Apple
+        ///Beach
+        ///Crane
+        ///Dream
+        ///Earth
+        ///Flake
+        ///Grape
+        ///House
+        ///Juice
+        ///Knife
+        ///Lemon
+        ///Money
+        ///Night
+        ///Ocean
+        ///Peach
+        ///Quilt
+        ///River
+        ///Stone
+        ///Tiger
+        ///Umbra
+        ///Vivid
+        ///Whale
+        ///Place
+        ///Youth
+        ///Zebra
+        ///Angel
+        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Cat {
+            get {
+                return ResourceManager.GetString("Cat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream fellowship {
@@ -70,7 +165,11 @@ namespace Group_Project.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Instructions:.
+        ///   Looks up a localized string similar to Instructions:
+        ///Type the correct word in to make the pickaxe mine the block.
+        ///You have 5 lives.
+        ///You have a minute to guess as many words as possible.
+        ///Press the mine button after you put the word in the text box..
         /// </summary>
         internal static string Instructions {
             get {

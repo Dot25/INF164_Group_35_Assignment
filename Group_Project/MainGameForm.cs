@@ -15,11 +15,12 @@ namespace Group_Project
     {
 
         ImageList.ImageCollection ImagesBlocks;
-        
+        GameClass obj = new GameClass();
         public MainGameForm()
         {
             InitializeComponent();
-            GameClass obj = new GameClass();
+            obj.LoadWordsFromFile(Properties.Resources.Cat);
+            lblWord.Text = obj.GetRandomWord();
             pbxOre.Image = imageListBlocks.Images[obj.getRandomBlock()];
             pbxOre.SizeMode = PictureBoxSizeMode.StretchImage;
         }
@@ -30,7 +31,7 @@ namespace Group_Project
         private void btnMine_Click(object sender, EventArgs e)
         {
             //Call getRandomBlock and getRandomWord
-            GameClass obj = new GameClass();
+            obj.GetRandomWord();
             obj.getRandomBlock();
         }
 

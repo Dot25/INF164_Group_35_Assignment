@@ -17,13 +17,63 @@ namespace Group_Project.Class
         private List<string> _words;
         private Random _random;
         private string _filepath;
+        private string _correctWord;
 
         public GameClass()
         {
             _words = new List<string>();
+            
             _random = new Random();
             _filepath = @"";
         }
+        public void LoadWordsFromFile(string filename)
+        {
+            try
+            {
+                using (StreamReader reader = new StreamReader(filename))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        _words.Add(line.Trim());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading words from file: " + ex.Message);
+            }
+        }
+        private string HideLetters(string _correctWord)
+        {
+            string _alteredWord = "";
+            char[] chars = _correctWord.ToCharArray();
+            if (_correctWord.Length > 4 && _correctWord.Length <= 6)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    chars[_random.Next(1, chars.Length)] = '_';
+                }
+            }
+            else
+            {
+                chars[_random.Next(1, chars.Length)] = '_';
+            }
+            _alteredWord = chars.ToString();
+            return _alteredWord;
+        }
+
+        public string GetRandomWord()
+        {
+            if (_words.Count == 0)
+            {
+                throw new InvalidOperationException("No words have been added to the game.");
+            }
+            _correctWord = _words[_random.Next(_words.Count)];
+
+            return HideLetters(_correctWord);
+        }
+
         
         public int getRandomBlock()
         {

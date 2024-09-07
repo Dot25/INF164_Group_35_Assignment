@@ -55,10 +55,13 @@
             // lblWord
             // 
             this.lblWord.BackColor = System.Drawing.Color.White;
+            this.lblWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWord.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblWord.Location = new System.Drawing.Point(276, 213);
             this.lblWord.Name = "lblWord";
             this.lblWord.Size = new System.Drawing.Size(205, 50);
             this.lblWord.TabIndex = 0;
+            this.lblWord.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnMine
             // 
