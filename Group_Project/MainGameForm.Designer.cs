@@ -111,14 +111,14 @@
             this.imageListBlocks.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListBlocks.Images.SetKeyName(0, "sand.jpg");
             this.imageListBlocks.Images.SetKeyName(1, "dirt.jpg");
-            this.imageListBlocks.Images.SetKeyName(2, "coal.jpg");
-            this.imageListBlocks.Images.SetKeyName(3, "copper.jpg");
-            this.imageListBlocks.Images.SetKeyName(4, "diamond.png");
-            this.imageListBlocks.Images.SetKeyName(5, "emerald.jpg");
+            this.imageListBlocks.Images.SetKeyName(2, "stone.jpg");
+            this.imageListBlocks.Images.SetKeyName(3, "coal.jpg");
+            this.imageListBlocks.Images.SetKeyName(4, "copper.jpg");
+            this.imageListBlocks.Images.SetKeyName(5, "iron.jpg");
             this.imageListBlocks.Images.SetKeyName(6, "gold.jpg");
-            this.imageListBlocks.Images.SetKeyName(7, "iron.jpg");
-            this.imageListBlocks.Images.SetKeyName(8, "obsidian.jpg");
-            this.imageListBlocks.Images.SetKeyName(9, "stone.jpg");
+            this.imageListBlocks.Images.SetKeyName(7, "diamond.png");
+            this.imageListBlocks.Images.SetKeyName(8, "emerald.jpg");
+            this.imageListBlocks.Images.SetKeyName(9, "obsidian.jpg");
             // 
             // tmrCountdown
             // 

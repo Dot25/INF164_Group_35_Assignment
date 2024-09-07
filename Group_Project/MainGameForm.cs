@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Group_Project.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,28 +15,32 @@ namespace Group_Project
     {
 
         ImageList.ImageCollection ImagesBlocks;
-
+        
         public MainGameForm()
         {
             InitializeComponent();
-            pbxOre.Image = imageListBlocks.Images[0];
+            GameClass obj = new GameClass();
+            pbxOre.Image = imageListBlocks.Images[obj.getRandomBlock()];
             pbxOre.SizeMode = PictureBoxSizeMode.StretchImage;
         }
-
+        
+        
         int timeElapsed = 0;
 
         private void btnMine_Click(object sender, EventArgs e)
         {
-            
+            //Call getRandomBlock and getRandomWord
+            GameClass obj = new GameClass();
+            obj.getRandomBlock();
         }
 
         private void tmrCountdown_Tick(object sender, EventArgs e)
         {
-            ++timeElapsed;
-            if(timeElapsed == 10)
-            {
-                
-            }
+           ++timeElapsed;
+           if(timeElapsed == 60)
+           {
+              //Get Exp method
+           }
         }
 
         private void txtInput_TextChanged(object sender, EventArgs e)

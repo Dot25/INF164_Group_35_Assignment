@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Collections;
+using System.IO;
+using System.Windows.Forms;
 
 
 namespace Group_Project.Class
@@ -20,44 +22,93 @@ namespace Group_Project.Class
         {
             _words = new List<string>();
             _random = new Random();
-            _filepath = @""
+            _filepath = @"";
         }
-        public void AddWord(string word)
+        
+        public int getRandomBlock()
         {
-            _words.Add(word);
-        }
-        public void AddWordsFromFile(string filePath)
-        {
-            string[] words = File.ReadAllLines(filePath);
-            foreach (string word in words)
+            Random random = new Random();
+            int picture = 0;
+            int randomWord = random.Next(0, 100);
+            if (randomWord >= 1 && randomWord <= 4)
             {
-                AddWord(word.Trim());
+                picture = 0;
             }
-        }
-        public string GetRandomWord()
-        {
-            if (_words.Count == 0)
+            else if(randomWord >= 5 && randomWord <= 14)
             {
-                throw new InvalidOperationException("No words have been added to the game.");
+                picture = 1;
             }
-            return _words[_random.Next(_words.Count)];
-        }
+            else if (randomWord >= 15 && randomWord <= 30)
+            {
 
-        public bool CheckInput(string word, string userInput)
-        {
-            return word.Equals(userInput, StringComparison.OrdinalIgnoreCase);
-        }
-        public string RevealWord(string word, string userInput)
-        {
-            char[] revealedWord = word.ToCharArray();
-            for (int i = 0; i < revealedWord.Length; i++)
-            {
-                if (userInput.Length > i && char.ToUpper(userInput[i]) == char.ToUpper(word[i]))
-                {
-                    revealedWord[i] = word[i]; // reveal the correct character(s)
-                }
+                picture = 2;
             }
-            return new string(revealedWord);
+            else if (randomWord >= 31 && randomWord <= 46)
+            {
+                picture = 3;
+            }
+            else if (randomWord >= 47 && randomWord <= 57)
+            {
+                picture = 4;
+            }
+            else if (randomWord >= 58 && randomWord <= 68)
+            {
+                picture = 5;
+            }
+            else if (randomWord >= 69 && randomWord <= 79)
+            {;
+                picture = 6;
+            }
+            else if (randomWord >= 80 && randomWord <= 87)
+            {
+                picture = 7;
+            }
+            else if (randomWord >= 88 && randomWord <= 94)
+            {
+                picture = 8;
+            }
+            else if (randomWord >= 95 && randomWord <= 100)
+            {
+                picture = 9;
+            }
+                return picture;
         }
+        /*public void AddWord(string word)
+{
+_words.Add(word);
+}
+public void AddWordsFromFile(string filePath)
+{
+string[] words = File.ReadAllLines(filePath);
+foreach (string word in words)
+{
+AddWord(word.Trim());
+}
+}
+public string GetRandomWord()
+{
+if (_words.Count == 0)
+{
+throw new InvalidOperationException("No words have been added to the game.");
+}
+return _words[_random.Next(_words.Count)];
+}
+
+public bool CheckInput(string word, string userInput)
+{
+return word.Equals(userInput, StringComparison.OrdinalIgnoreCase);
+}
+public string RevealWord(string word, string userInput)
+{
+char[] revealedWord = word.ToCharArray();
+for (int i = 0; i < revealedWord.Length; i++)
+{
+if (userInput.Length > i && char.ToUpper(userInput[i]) == char.ToUpper(word[i]))
+{
+revealedWord[i] = word[i]; // reveal the correct character(s)
+}
+}
+return new string(revealedWord);
+}*/
     }
 }
