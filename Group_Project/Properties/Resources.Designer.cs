@@ -68,5 +68,14 @@ namespace Group_Project.Properties {
                 return ResourceManager.GetStream("fellowship", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instructions:.
+        /// </summary>
+        internal static string Instructions {
+            get {
+                return ResourceManager.GetString("Instructions", resourceCulture);
+            }
+        }
     }
 }

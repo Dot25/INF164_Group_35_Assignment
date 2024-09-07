@@ -52,7 +52,8 @@ namespace Group_Project
 
         private void btnInstructions_Click(object sender, EventArgs e)
         {
-
+            InstructionsForm newInstructionsForm = new InstructionsForm();
+            newInstructionsForm.ShowDialog();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
