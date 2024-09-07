@@ -7,6 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Collections;
 using System.IO;
 using System.Windows.Forms;
+using Group_Project.Properties;
 
 
 namespace Group_Project.Class
@@ -18,6 +19,10 @@ namespace Group_Project.Class
         private Random _random;
         private string _filepath;
         private string _correctWord;
+        private int picture = 0;
+        private int[] exp = new int[9] {3,6,9,12,15,18,21,24,27};
+        private int totalExp = 0;
+        private int durability = 5;
 
         public GameClass()
         {
@@ -30,7 +35,7 @@ namespace Group_Project.Class
         {
             try
             {
-                StreamReader reader = new StreamReader("C:/Users/makha/Downloads/Cat.txt");
+                StreamReader reader = new StreamReader("C:/Users/makha/source/repos/INF164_Group_35_Assignment/Group_Project/Resources/Cat.txt");
                 {
                     string line;
                     while ((line = reader.ReadLine()) != null)
@@ -65,20 +70,38 @@ namespace Group_Project.Class
                 }
                 
             }
-            //char[] chars = _correctWord.ToCharArray();
-            /*if (_correctWord.Length > 4 && _correctWord.Length <= 6)
+            return _alteredWord;
+        }
+
+        public bool equal(string input)
+        {
+            if(input.ToUpper().Equals(_correctWord.ToUpper()))
             {
-                for (int i = 0; i < 2; i++)
-                {
-                    chars[_random.Next(1, chars.Length)] = '_';
-                }
+                return true;
             }
             else
             {
-                chars[_random.Next(1, chars.Length)] = '_';
+                return false;
             }
-            _alteredWord = chars.ToString();*/
-            return _alteredWord;
+        }
+
+        public void addExp()
+        {
+            totalExp += exp[picture];
+        }
+
+        public bool removeDurability()
+        {
+            if(durability > 0) 
+            {
+               --durability;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
 
         public string GetRandomWord()
@@ -96,7 +119,7 @@ namespace Group_Project.Class
         public int getRandomBlock()
         {
             Random random = new Random();
-            int picture = 0;
+            
             int randomWord = random.Next(0, 100);
             if (randomWord >= 1 && randomWord <= 4)
             {

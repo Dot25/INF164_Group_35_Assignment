@@ -31,7 +31,25 @@ namespace Group_Project
         private void btnMine_Click(object sender, EventArgs e)
         {
             //Call getRandomBlock and getRandomWord
-            lblWord.Text = obj.GetRandomWord();
+            if(obj.equal(txtInput.Text) == true)
+            {
+                obj.addExp();
+                lblWord.Text = obj.GetRandomWord();
+                //MessageBox.Show("1");
+            }
+            else
+            {
+                //MessageBox.Show("0");
+                if (obj.removeDurability() == false)
+                {
+                    //End Game
+                }
+                else
+                {
+                    lblWord.Text = obj.GetRandomWord();
+                }
+            }
+            
             //obj.getRandomBlock();
         }
 
