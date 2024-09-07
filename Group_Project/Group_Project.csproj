@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\GameClass.cs" />
+    <Compile Include="Class\Record.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

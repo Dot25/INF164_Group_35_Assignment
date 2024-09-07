@@ -16,5 +16,11 @@ namespace Group_Project
         {
             InitializeComponent();
         }
+
+
+        private void dgvHighScores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

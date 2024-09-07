@@ -35,6 +35,7 @@
             // 
             this.rtbInstructions.Location = new System.Drawing.Point(179, 66);
             this.rtbInstructions.Name = "rtbInstructions";
+            this.rtbInstructions.ReadOnly = true;
             this.rtbInstructions.Size = new System.Drawing.Size(409, 264);
             this.rtbInstructions.TabIndex = 0;
             this.rtbInstructions.Text = "";

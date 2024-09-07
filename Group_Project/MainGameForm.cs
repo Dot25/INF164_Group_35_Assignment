@@ -23,11 +23,12 @@ namespace Group_Project
             lblWord.Text = obj.GetRandomWord();
             pbxOre.Image = imageListBlocks.Images[obj.getRandomBlock()];
             pbxOre.SizeMode = PictureBoxSizeMode.StretchImage;
+            tmrCountdown.Start();
         }
         
         
         int timeElapsed = 0;
-
+        
         private void btnMine_Click(object sender, EventArgs e)
         {
             //Call getRandomBlock and getRandomWord
@@ -36,33 +37,36 @@ namespace Group_Project
                 obj.addExp();
                 lblExp.Text = "EXP Gained: " + obj.getExp().ToString();
                 lblWord.Text = obj.GetRandomWord();
-                //MessageBox.Show("1");
+                pbxOre.Image = imageListBlocks.Images[obj.getRandomBlock()];
             }
             else
             {
                 //MessageBox.Show("0");
-                if (obj.removeDurability() == false)
+                obj.removeDurability();
+                lblWord.Text = obj.GetRandomWord();
+                lblDurability.Text = "Durability: " + obj.getDurability().ToString() + "/5";
+                pbxOre.Image = imageListBlocks.Images[obj.getRandomBlock()];
+                if(obj.getDurability() == 0)
                 {
-                    //End Game
-
-                }
-                else
-                {
-                    lblWord.Text = obj.GetRandomWord();
-                    lblDurability.Text = "Durability: " + obj.getDurability().ToString() + "/5";
+                    this.Hide();
+                    HighScoreForm newHighScoreForm = new HighScoreForm();
+                    newHighScoreForm.ShowDialog();
                 }
             }
-            
+            txtInput.Clear();
             //obj.getRandomBlock();
         }
 
         private void tmrCountdown_Tick(object sender, EventArgs e)
         {
            ++timeElapsed;
+           lblTimeRemaining.Text = "Time Remaining: " + (60 - timeElapsed).ToString();
            if(timeElapsed == 60)
            {
-              //Get Exp method
-           }
+                this.Hide();
+                HighScoreForm newHighScoreForm = new HighScoreForm();
+                newHighScoreForm.ShowDialog();
+            }
         }
 
         private void txtInput_TextChanged(object sender, EventArgs e)

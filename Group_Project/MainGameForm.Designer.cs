@@ -40,6 +40,7 @@
             this.tmrCountdown = new System.Windows.Forms.Timer(this.components);
             this.lblDurability = new System.Windows.Forms.Label();
             this.lblExp = new System.Windows.Forms.Label();
+            this.lblTimeRemaining = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxOre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAxe)).BeginInit();
             this.SuspendLayout();
@@ -135,7 +136,7 @@
             this.lblDurability.AutoSize = true;
             this.lblDurability.BackColor = System.Drawing.Color.Transparent;
             this.lblDurability.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDurability.Location = new System.Drawing.Point(530, 134);
+            this.lblDurability.Location = new System.Drawing.Point(529, 134);
             this.lblDurability.Name = "lblDurability";
             this.lblDurability.Size = new System.Drawing.Size(146, 25);
             this.lblDurability.TabIndex = 5;
@@ -153,12 +154,24 @@
             this.lblExp.Text = "EXP Gained: \r\n";
             this.lblExp.Click += new System.EventHandler(this.lblExp_Click);
             // 
+            // lblTimeRemaining
+            // 
+            this.lblTimeRemaining.AutoSize = true;
+            this.lblTimeRemaining.BackColor = System.Drawing.Color.Transparent;
+            this.lblTimeRemaining.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeRemaining.Location = new System.Drawing.Point(260, 416);
+            this.lblTimeRemaining.Name = "lblTimeRemaining";
+            this.lblTimeRemaining.Size = new System.Drawing.Size(235, 25);
+            this.lblTimeRemaining.TabIndex = 7;
+            this.lblTimeRemaining.Text = "Time Remaining: 00:00";
+            // 
             // MainGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblTimeRemaining);
             this.Controls.Add(this.lblExp);
             this.Controls.Add(this.lblDurability);
             this.Controls.Add(this.pbxAxe);
@@ -188,5 +201,6 @@
         private System.Windows.Forms.Timer tmrCountdown;
         private System.Windows.Forms.Label lblDurability;
         private System.Windows.Forms.Label lblExp;
+        private System.Windows.Forms.Label lblTimeRemaining;
     }
 }

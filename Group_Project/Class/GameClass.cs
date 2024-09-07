@@ -28,9 +28,7 @@ namespace Group_Project.Class
         public GameClass()
         {
             _words = new List<string>();
-            
             _random = new Random();
-            _filepath = @"";
         }
         public void LoadWordsFromFile()
         {
@@ -102,16 +100,11 @@ namespace Group_Project.Class
             return durability;
         }
 
-        public bool removeDurability()
+        public void removeDurability()
         {
             if(durability > 0) 
             {
                --durability;
-                return true;
-            }
-            else
-            {
-                return false;
             }
         }
 
