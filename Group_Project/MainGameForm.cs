@@ -19,7 +19,7 @@ namespace Group_Project
         public MainGameForm()
         {
             InitializeComponent();
-            obj.LoadWordsFromFile(Properties.Resources.Cat);
+            obj.LoadWordsFromFile();
             lblWord.Text = obj.GetRandomWord();
             pbxOre.Image = imageListBlocks.Images[obj.getRandomBlock()];
             pbxOre.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -31,8 +31,8 @@ namespace Group_Project
         private void btnMine_Click(object sender, EventArgs e)
         {
             //Call getRandomBlock and getRandomWord
-            obj.GetRandomWord();
-            obj.getRandomBlock();
+            lblWord.Text = obj.GetRandomWord();
+            //obj.getRandomBlock();
         }
 
         private void tmrCountdown_Tick(object sender, EventArgs e)

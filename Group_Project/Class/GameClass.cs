@@ -26,29 +26,47 @@ namespace Group_Project.Class
             _random = new Random();
             _filepath = @"";
         }
-        public void LoadWordsFromFile(string filename)
+        public void LoadWordsFromFile()
         {
             try
             {
-                using (StreamReader reader = new StreamReader(filename))
+                StreamReader reader = new StreamReader("C:/Users/makha/Downloads/Cat.txt");
                 {
                     string line;
                     while ((line = reader.ReadLine()) != null)
                     {
                         _words.Add(line.Trim());
+                        
                     }
                 }
+                reader.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error loading words from file: " + ex.Message);
             }
+
         }
         private string HideLetters(string _correctWord)
         {
             string _alteredWord = "";
-            char[] chars = _correctWord.ToCharArray();
-            if (_correctWord.Length > 4 && _correctWord.Length <= 6)
+            int len = _correctWord.Length;
+            Random random = new Random();
+            int switchPos = random.Next(1, len);
+            for(int i = 0; i < len; ++i)
+            {
+                if(i == switchPos)
+                {
+                    _alteredWord += '_';
+                }
+                else
+                {
+                    _alteredWord += _correctWord[i];
+                }
+                
+            }
+            //char[] chars = _correctWord.ToCharArray();
+            /*if (_correctWord.Length > 4 && _correctWord.Length <= 6)
             {
                 for (int i = 0; i < 2; i++)
                 {
@@ -59,7 +77,7 @@ namespace Group_Project.Class
             {
                 chars[_random.Next(1, chars.Length)] = '_';
             }
-            _alteredWord = chars.ToString();
+            _alteredWord = chars.ToString();*/
             return _alteredWord;
         }
 
@@ -89,8 +107,7 @@ namespace Group_Project.Class
                 picture = 1;
             }
             else if (randomWord >= 15 && randomWord <= 30)
-            {
-
+            { 
                 picture = 2;
             }
             else if (randomWord >= 31 && randomWord <= 46)
