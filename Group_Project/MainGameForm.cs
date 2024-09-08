@@ -14,35 +14,39 @@ namespace Group_Project
 {
     public partial class MainGameForm : Form
     {
-
+        //Declarations and some initialisations
         ImageList.ImageCollection ImagesBlocks;
         GameClass obj = new GameClass();
         BindingList<Record> recordsList;
-
+        int timeElapsed = 0;
         public MainGameForm()
         {
             InitializeComponent();
+            //Gets the words from the Cat textfile
             obj.LoadWordsFromFile();
+
+            //Sets a word and image
             lblWord.Text = obj.GetRandomWord();
             pbxOre.Image = imageListBlocks.Images[obj.getRandomBlock()];
             pbxOre.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            //Initialise the list
             recordsList = new BindingList<Record>();
 
 
         }
 
-
-        int timeElapsed = 0;
-        
         private void btnMine_Click(object sender, EventArgs e)
         {
             //Checks if the player input matches the correct word
             if(obj.equal(txtInput.Text) == true)
             {
-                //Updates exp and blocksbroken
+                //Updates exp and blocksbroken and the labels
                 obj.addExp();
                 obj.setBlocksBroken();
                 lblExp.Text = "EXP Gained: " + obj.getExp().ToString();
+
+                //Sets a new word and new image
                 lblWord.Text = obj.GetRandomWord();
                 pbxOre.Image = imageListBlocks.Images[obj.getRandomBlock()];
             }
@@ -106,21 +110,28 @@ namespace Group_Project
         private void btnName_Click(object sender, EventArgs e)
         {
             //Switches the interface from get name to the games and starts the game timer
-            tmrCountdown.Start();
-            obj.setName(txtName.Text);
-            lblExp.Visible = true;
-            lblName.Visible = false;
-            lblDurability.Visible = true;
-            lblTimeRemaining.Visible = true;
-            btnMine.Visible = true;
-            btnName.Visible = false;
-            txtInput.Visible = true;
-            txtName.Visible = false;
-            pbxAxe.Visible = true;
-            pbxOre.Visible = true;
-            lblWord.Visible = true;
-            
-            
+            if(string.IsNullOrEmpty(txtName.Text))
+            {
+                MessageBox.Show("Please enter a valid name");
+            }
+            else
+            {
+                tmrCountdown.Start();
+                obj.setName(txtName.Text);
+                lblExp.Visible = true;
+                lblName.Visible = false;
+                lblDurability.Visible = true;
+                lblTimeRemaining.Visible = true;
+                btnMine.Visible = true;
+                btnName.Visible = false;
+                txtInput.Visible = true;
+                txtName.Visible = false;
+                pbxAxe.Visible = true;
+                pbxOre.Visible = true;
+                lblWord.Visible = true;
+            }
+
+
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)

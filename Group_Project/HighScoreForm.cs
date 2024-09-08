@@ -14,6 +14,9 @@ namespace Group_Project
 {
     public partial class HighScoreForm : Form
     {
+
+        //Declaration of BindingList
+        BindingList<Record> recordsList = new BindingList<Record>();
         public HighScoreForm()
         {
             InitializeComponent();
@@ -25,8 +28,6 @@ namespace Group_Project
         {
             
         }
-        //Declaration of BindingList
-        BindingList<Record> recordsList = new BindingList<Record>();
         
         
         private void HighScoreForm_Load(object sender, EventArgs e)

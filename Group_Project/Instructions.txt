@@ -1,5 +1,6 @@
 Instructions:
 Type the correct word in to make the pickaxe mine the block.
-You have 5 lives.
-You have a minute to guess as many words as possible.
-Press the mine button after you put the word in the text box.
+Rack up Exp with every block you mine.
+You have 5 durability(lives).
+You have a minute to guess as many words as possible and rack up Exp.
+Press Mine after you put the word in the text box.

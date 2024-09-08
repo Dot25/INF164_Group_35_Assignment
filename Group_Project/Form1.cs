@@ -16,7 +16,7 @@ namespace Group_Project
     public partial class pnlWelcomeForm : Form
     {
         //Declaring the SoundPlayer object to play the music
-        public static SoundPlayer audio = new SoundPlayer(Group_Project.Properties.Resources.fellowship);
+        SoundPlayer audio = new SoundPlayer(Group_Project.Properties.Resources.fellowship);
         public pnlWelcomeForm()
         {
             InitializeComponent();

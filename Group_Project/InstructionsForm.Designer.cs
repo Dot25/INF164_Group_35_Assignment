@@ -35,6 +35,7 @@
             // 
             // rtbInstructions
             // 
+            this.rtbInstructions.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.rtbInstructions.Location = new System.Drawing.Point(179, 66);
             this.rtbInstructions.Name = "rtbInstructions";
             this.rtbInstructions.ReadOnly = true;
