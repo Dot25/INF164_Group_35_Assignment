@@ -15,7 +15,7 @@ namespace Group_Project.Class
         {
             _name = name;
             _totalExp = totalExp;
-            _blocksBroken = blockBroken;
+            //_blocksBroken = blockBroken;
         }
 
         public string Name
@@ -24,7 +24,7 @@ namespace Group_Project.Class
         public int TotalExp
         {   get { return _totalExp; } }
 
-        public int BlocksBroken
-        {   get { return _blocksBroken; } }
+        //public int BlocksBroken
+        //{   get { return _blocksBroken; } }
     }
 }

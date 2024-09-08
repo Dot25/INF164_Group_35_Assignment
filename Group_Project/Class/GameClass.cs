@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Group_Project.Properties;
 using System.IO.Pipes;
 using Microsoft.VisualBasic;
+using System.ComponentModel;
 
 
 namespace Group_Project.Class
@@ -26,7 +27,7 @@ namespace Group_Project.Class
         private int totalExp = 0;
         private int durability = 5;
         private int numBlocksBroken = 0;
-        private string _name;
+        public string _name;
 
         public GameClass()
         {
@@ -97,6 +98,10 @@ namespace Group_Project.Class
         {
             return totalExp;
         }
+        public void setExperience(int experience)
+        {
+            totalExp = experience; 
+        }
 
         public int getDurability()
         {
@@ -131,10 +136,11 @@ namespace Group_Project.Class
         {
             try
             {
-                using (StreamWriter writeTo = new StreamWriter("Resources/Records.txt"))
-                {
-                    writeTo.WriteLine(_name + "#" + totalExp.ToString() + "#" + numBlocksBroken.ToString());
-                }
+                
+               using (StreamWriter writeTo = new StreamWriter("Resources/Records.txt"))
+               {
+                   writeTo.WriteLine(_name + "#" + totalExp.ToString() + "#" + numBlocksBroken.ToString());
+               }
 
              }
             catch (Exception ex)
@@ -143,6 +149,47 @@ namespace Group_Project.Class
             }
         }
 
+        public void WriteToFile(string listName, BindingList<Record> list)
+        {
+            try
+            {
+                using (FileStream outFile = new FileStream(listName + ".ser", FileMode.Create, FileAccess.Write))
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    formatter.Serialize(outFile, list);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error saving to file: " + ex.Message);
+            }
+        }
+
+        
+        public BindingList<Record> ReadFromFile(string listName)
+        {
+            try
+            {
+                if (File.Exists(listName + ".ser"))
+                {
+                    using (FileStream inFile = new FileStream(listName + ".ser", FileMode.Open, FileAccess.Read))
+                    {
+                        BinaryFormatter formatter = new BinaryFormatter();
+                        return (BindingList<Record>)formatter.Deserialize(inFile);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("File not found.");
+                    return new BindingList<Record>();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error reading from file: " + ex.Message);
+                return new BindingList<Record>();
+            }
+        }
 
         public int getRandomBlock()
         {
