@@ -38,7 +38,7 @@ namespace Group_Project.Class
         {
             try
             {
-                StreamReader reader = new StreamReader("Resources/Cat.txt");
+                StreamReader reader = new StreamReader("Cat.txt");
                 {
                     string line;
                     while ((line = reader.ReadLine()) != null)
@@ -94,6 +94,11 @@ namespace Group_Project.Class
             ++numBlocksBroken;
         }
 
+        public int getBlocksBroken()
+        {
+            return numBlocksBroken;
+        }
+
         public int getExp()
         {
             return totalExp;
@@ -108,11 +113,14 @@ namespace Group_Project.Class
             return durability;
         }
 
-        public void getName(string name)
+        public void setName(string name)
         {
             _name = name;
         }
-
+        public string getName()
+        {
+            return _name;
+        }
         public void removeDurability()
         {
             if(durability > 0) 
@@ -136,10 +144,10 @@ namespace Group_Project.Class
         {
             try
             {
-
-               StreamWriter writeTo = new StreamWriter("Resources/Records.txt");
+                
+               StreamWriter writeTo = new StreamWriter("Records.txt");
                {
-                   writeTo.Write(_name + "#" + totalExp.ToString() + "#" + numBlocksBroken.ToString());
+                   writeTo.WriteLine(_name + "#" + totalExp.ToString() + "#" + numBlocksBroken.ToString());
                }
                 writeTo.Close();
              }
@@ -153,11 +161,10 @@ namespace Group_Project.Class
         {
             try
             {
-                using (FileStream outFile = new FileStream(listName + ".ser", FileMode.Create, FileAccess.Write))
-                {
-                    BinaryFormatter formatter = new BinaryFormatter();
-                    formatter.Serialize(outFile, list);
-                }
+                FileStream outFile = new FileStream(listName + ".ser", FileMode.Create, FileAccess.Write);
+                BinaryFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(outFile, list);
+                outFile.Close();
             }
             catch (Exception ex)
             {
@@ -166,28 +173,33 @@ namespace Group_Project.Class
         }
 
         
-        public BindingList<Record> ReadFromFile(string listName)
+        public void ReadFromFile(string listName, BindingList<Record> list)
         {
             try
             {
-                if (File.Exists(listName + ".ser"))
+                //if (File.Exists(listName + ".ser"))
+                //{
+                FileStream inFile = new FileStream(listName + ".ser", FileMode.Open, FileAccess.Read);
+                BinaryFormatter formatter = new BinaryFormatter();
+                list.Clear();
+                var tempList = (BindingList<Record>)formatter.Deserialize(inFile);
+                foreach(Record myObject in tempList)
                 {
-                    using (FileStream inFile = new FileStream(listName + ".ser", FileMode.Open, FileAccess.Read))
-                    {
-                        BinaryFormatter formatter = new BinaryFormatter();
-                        return (BindingList<Record>)formatter.Deserialize(inFile);
-                    }
+                    list.Add(myObject);
                 }
-                else
-                {
-                    MessageBox.Show("File not found.");
-                    return new BindingList<Record>();
-                }
+                inFile.Close();
+                //return (BindingList<Record>)formatter.Deserialize(inFile);
+                    
+                //}
+                //else
+                //{
+                   // MessageBox.Show("File not found.");
+                   // return new BindingList<Record>();
+                //}
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error reading from file: " + ex.Message);
-                return new BindingList<Record>();
             }
         }
 

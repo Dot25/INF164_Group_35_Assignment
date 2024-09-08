@@ -17,7 +17,7 @@ namespace Group_Project
 
         ImageList.ImageCollection ImagesBlocks;
         GameClass obj = new GameClass();
-        private BindingList<Record> recordsList;
+        BindingList<Record> recordsList;
 
         public MainGameForm()
         {
@@ -54,6 +54,8 @@ namespace Group_Project
                 if(obj.getDurability() == 0)
                 {
                     obj.endGame();
+                    recordsList.Add(new Record(obj.getName(), obj.getExp(), obj.getBlocksBroken()));
+                    obj.WriteToFile("Records", recordsList);
                     this.Hide();
                     HighScoreForm newHighScoreForm = new HighScoreForm();
                     newHighScoreForm.ShowDialog();
@@ -69,18 +71,18 @@ namespace Group_Project
            lblTimeRemaining.Text = "Time Remaining: " + (60 - timeElapsed).ToString();
            if(timeElapsed == 60)
            {
-                string playerName = txtName.Text;
 
                 // Retrieve the experience from lblExperience
-                int experience = obj.getExp();
+                //int experience = obj.getExp();
 
                 // Pass the name and experience to the game class
-                obj.getName(playerName);
-                obj.setExperience(experience);
-                int blocksBroken = 1;
+                
+                //obj.setExperience(experience);
+                //int blocksBroken = 1;
 
                 obj.endGame();
-                recordsList.Add(new Record(playerName, experience, blocksBroken));
+                recordsList.Add(new Record(obj.getName(), obj.getExp(), obj.getBlocksBroken()));
+                obj.WriteToFile("Records", recordsList);
                 this.Hide();
                 HighScoreForm newHighScoreForm = new HighScoreForm();
                 newHighScoreForm.ShowDialog();
@@ -100,6 +102,7 @@ namespace Group_Project
         private void btnName_Click(object sender, EventArgs e)
         {
             tmrCountdown.Start();
+            obj.setName(txtName.Text);
             lblExp.Visible = true;
             lblName.Visible = false;
             lblDurability.Visible = true;

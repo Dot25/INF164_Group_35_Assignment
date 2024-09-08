@@ -31,7 +31,7 @@ namespace Group_Project
         private void HighScoreForm_Load(object sender, EventArgs e)
         {
             GameClass obj = new GameClass();
-            recordsList = obj.ReadFromFile("Records");
+            obj.ReadFromFile("Records", recordsList);
             dgvHighScores.DataSource = recordsList;
 
         }
