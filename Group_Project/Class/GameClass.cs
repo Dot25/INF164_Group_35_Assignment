@@ -23,7 +23,7 @@ namespace Group_Project.Class
         private string _filepath;
         private string _correctWord;
         private int picture = 0;
-        private int[] exp = new int[9] {3,6,9,12,15,18,21,24,27};
+        private int[] exp = new int[10] {3,6,9,12,15,18,21,24,27,30};
         private int totalExp = 0;
         private int durability = 5;
         private int numBlocksBroken = 0;
@@ -136,12 +136,12 @@ namespace Group_Project.Class
         {
             try
             {
-                
-               using (StreamWriter writeTo = new StreamWriter("Resources/Records.txt"))
-               {
-                   writeTo.WriteLine(_name + "#" + totalExp.ToString() + "#" + numBlocksBroken.ToString());
-               }
 
+               StreamWriter writeTo = new StreamWriter("Resources/Records.txt");
+               {
+                   writeTo.Write(_name + "#" + totalExp.ToString() + "#" + numBlocksBroken.ToString());
+               }
+                writeTo.Close();
              }
             catch (Exception ex)
             {
