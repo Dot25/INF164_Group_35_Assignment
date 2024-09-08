@@ -26,7 +26,7 @@ namespace Group_Project.Class
         public int TotalExp
         {   get { return _totalExp; } }
 
-        //public int BlocksBroken
-        //{   get { return _blocksBroken; } }
+        public int BlocksBroken
+        {   get { return _blocksBroken; } }
     }
 }

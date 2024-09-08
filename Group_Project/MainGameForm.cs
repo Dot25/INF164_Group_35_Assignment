@@ -53,7 +53,7 @@ namespace Group_Project
                 pbxOre.Image = imageListBlocks.Images[obj.getRandomBlock()];
                 if(obj.getDurability() == 0)
                 {
-                    obj.endGame();
+                    //obj.endGame();
                     recordsList.Add(new Record(obj.getName(), obj.getExp(), obj.getBlocksBroken()));
                     obj.WriteToFile("Records", recordsList);
                     this.Hide();
@@ -80,7 +80,7 @@ namespace Group_Project
                 //obj.setExperience(experience);
                 //int blocksBroken = 1;
 
-                obj.endGame();
+                //obj.endGame();
                 recordsList.Add(new Record(obj.getName(), obj.getExp(), obj.getBlocksBroken()));
                 obj.WriteToFile("Records", recordsList);
                 this.Hide();

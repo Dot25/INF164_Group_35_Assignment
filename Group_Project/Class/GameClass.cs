@@ -140,7 +140,7 @@ namespace Group_Project.Class
             return HideLetters(_correctWord);
         }
 
-        public void endGame()
+        /*public void endGame()
         {
             try
             {
@@ -155,16 +155,28 @@ namespace Group_Project.Class
             {
                 MessageBox.Show("Error loading words from file: " + ex.Message);
             }
-        }
+        }*/
 
         public void WriteToFile(string listName, BindingList<Record> list)
         {
             try
             {
-                FileStream outFile = new FileStream(listName + ".ser", FileMode.Create, FileAccess.Write);
-                BinaryFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(outFile, list);
-                outFile.Close();
+                if(!File.Exists(listName + ".ser"))
+                {
+                    FileStream outFile = new FileStream(listName + ".ser", FileMode.Create, FileAccess.Write);
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    formatter.Serialize(outFile, list);
+                    outFile.Close();
+                }
+                else
+                {
+                    ReadFromFile(listName, list);
+
+                    FileStream outFile = new FileStream(listName + ".ser", FileMode.Create, FileAccess.Write);
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    formatter.Serialize(outFile, list);
+                    outFile.Close();
+                }
             }
             catch (Exception ex)
             {
@@ -177,11 +189,10 @@ namespace Group_Project.Class
         {
             try
             {
-                //if (File.Exists(listName + ".ser"))
-                //{
+                if (File.Exists(listName + ".ser"))
+                {
                 FileStream inFile = new FileStream(listName + ".ser", FileMode.Open, FileAccess.Read);
                 BinaryFormatter formatter = new BinaryFormatter();
-                list.Clear();
                 var tempList = (BindingList<Record>)formatter.Deserialize(inFile);
                 foreach(Record myObject in tempList)
                 {
@@ -190,12 +201,12 @@ namespace Group_Project.Class
                 inFile.Close();
                 //return (BindingList<Record>)formatter.Deserialize(inFile);
                     
-                //}
-                //else
-                //{
-                   // MessageBox.Show("File not found.");
+                }
+                else
+                {
+                   MessageBox.Show("File not found.");
                    // return new BindingList<Record>();
-                //}
+                }
             }
             catch (Exception ex)
             {
