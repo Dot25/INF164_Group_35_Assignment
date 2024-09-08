@@ -55,6 +55,7 @@
             this.btnBestPlayer.TabIndex = 1;
             this.btnBestPlayer.Text = "Search for the best player";
             this.btnBestPlayer.UseVisualStyleBackColor = true;
+            this.btnBestPlayer.Click += new System.EventHandler(this.btnBestPlayer_Click);
             // 
             // HighScoreForm
             // 

@@ -195,7 +195,7 @@ namespace Group_Project.Class
         {
             Random random = new Random();
             
-            int randomWord = random.Next(0, 100);
+            int randomWord = random.Next(1, 101);
             if (randomWord >= 1 && randomWord <= 4)
             {
                 picture = 0;

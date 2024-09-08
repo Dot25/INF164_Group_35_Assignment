@@ -35,5 +35,10 @@ namespace Group_Project
             dgvHighScores.DataSource = recordsList;
 
         }
+
+        private void btnBestPlayer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
