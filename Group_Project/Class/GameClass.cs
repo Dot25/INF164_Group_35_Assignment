@@ -43,7 +43,7 @@ namespace Group_Project.Class
             try
             {
                 //Reads from the text file
-                StreamReader reader = new StreamReader("Cat.txt");
+                StreamReader reader = new StreamReader("Resources/Cat.txt");
                 {
                     string line;
                     while ((line = reader.ReadLine()) != null)
