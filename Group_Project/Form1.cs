@@ -15,6 +15,7 @@ namespace Group_Project
 {
     public partial class pnlWelcomeForm : Form
     {
+        //Declaring the SoundPlayer object to play the music
         public static SoundPlayer audio = new SoundPlayer(Group_Project.Properties.Resources.fellowship);
         public pnlWelcomeForm()
         {
@@ -25,7 +26,7 @@ namespace Group_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            //Loops the audio when the form loads
             audio.PlayLooping();
             btnMusicOff.BackColor = Color.Red;
             btnMusic.BackColor = Color.Green;
@@ -34,6 +35,7 @@ namespace Group_Project
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
+            //Hides this form and shows the MainGameForm
             this.Hide();
             MainGameForm newMainGameForm = new MainGameForm();
             newMainGameForm.ShowDialog();
@@ -42,7 +44,7 @@ namespace Group_Project
 
         private void btnMusic_Click(object sender, EventArgs e)
         {
-            
+            //Plays the audio on loop when the button is clicked and hides btnMusic and shows btnMusicOff
             audio.PlayLooping();
             btnMusic.Hide();
             btnMusicOff.Show();
@@ -52,19 +54,21 @@ namespace Group_Project
 
         private void btnInstructions_Click(object sender, EventArgs e)
         {
+            //Opens the instructions form
             InstructionsForm newInstructionsForm = new InstructionsForm();
             newInstructionsForm.ShowDialog();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-          
+            //Closes the program          
             this.Close();
             audio.Stop();
         }
 
         private void btnMusicOff_Click(object sender, EventArgs e)
         {
+            //Plays the audio on loop when the button is clicked and hides btnMusic and shows btnMusicOff
             audio.Stop();
             btnMusicOff.Hide();
             btnMusic.Show();

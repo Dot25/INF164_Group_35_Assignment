@@ -25,11 +25,13 @@ namespace Group_Project
         {
             
         }
+        //Declaration of BindingList
         BindingList<Record> recordsList = new BindingList<Record>();
         
         
         private void HighScoreForm_Load(object sender, EventArgs e)
         {
+            //dgvHighScores uses the binding list as the data source
             GameClass obj = new GameClass();
             obj.ReadFromFile("Records", recordsList);
             
@@ -39,6 +41,7 @@ namespace Group_Project
 
         private void btnBestPlayer_Click(object sender, EventArgs e)
         {
+            //Finds the best score and displays it
             string bestPlayer = recordsList[0].Name;
             int bestScore = recordsList[0].TotalExp;
            for(int i = 0; i < recordsList.Count; ++i)
@@ -59,6 +62,7 @@ namespace Group_Project
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
+            //Returns to the welcome form
             this.Hide();
             pnlWelcomeForm Form1 = new pnlWelcomeForm();
             Form1.ShowDialog();

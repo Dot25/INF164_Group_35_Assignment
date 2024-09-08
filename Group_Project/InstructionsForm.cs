@@ -28,19 +28,20 @@ namespace Group_Project
                 {
                     string fileContent = Properties.Resources.Instructions;
 
-                    // Displays the contents in the RichTextBox
+                    // Displays the instructions in the RichTextBox
                     rtbInstructions.Text = fileContent;
                 }
             }
             catch (Exception ex)
             {
-                // Exceptions Handling
+                // Exception Handling
                 MessageBox.Show($"An error occurred while loading the instructions: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
+            //Returns to the welcome form
             this.Hide();
             
         }
