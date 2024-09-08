@@ -31,18 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HighScoreForm));
             this.dgvHighScores = new System.Windows.Forms.DataGridView();
             this.btnBestPlayer = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHighScores)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvHighScores
             // 
             this.dgvHighScores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHighScores.Location = new System.Drawing.Point(185, 65);
+            this.dgvHighScores.Location = new System.Drawing.Point(118, 11);
             this.dgvHighScores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvHighScores.Name = "dgvHighScores";
             this.dgvHighScores.RowHeadersWidth = 51;
             this.dgvHighScores.RowTemplate.Height = 24;
-            this.dgvHighScores.Size = new System.Drawing.Size(411, 233);
+            this.dgvHighScores.Size = new System.Drawing.Size(538, 317);
             this.dgvHighScores.TabIndex = 0;
             this.dgvHighScores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHighScores_CellContentClick);
             // 
@@ -57,6 +58,16 @@
             this.btnBestPlayer.UseVisualStyleBackColor = true;
             this.btnBestPlayer.Click += new System.EventHandler(this.btnBestPlayer_Click);
             // 
+            // btnReturn
+            // 
+            this.btnReturn.Location = new System.Drawing.Point(638, 362);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(115, 40);
+            this.btnReturn.TabIndex = 3;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
             // HighScoreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -64,10 +75,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnBestPlayer);
             this.Controls.Add(this.dgvHighScores);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HighScoreForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HighScoreForm";
             this.Load += new System.EventHandler(this.HighScoreForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHighScores)).EndInit();
@@ -79,5 +92,6 @@
 
         private System.Windows.Forms.DataGridView dgvHighScores;
         private System.Windows.Forms.Button btnBestPlayer;
+        private System.Windows.Forms.Button btnReturn;
     }
 }

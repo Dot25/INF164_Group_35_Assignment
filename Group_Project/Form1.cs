@@ -15,7 +15,7 @@ namespace Group_Project
 {
     public partial class pnlWelcomeForm : Form
     {
-        SoundPlayer audio = new SoundPlayer(Group_Project.Properties.Resources.fellowship);
+        public static SoundPlayer audio = new SoundPlayer(Group_Project.Properties.Resources.fellowship);
         public pnlWelcomeForm()
         {
             InitializeComponent();
@@ -60,7 +60,7 @@ namespace Group_Project
         {
           
             this.Close();
-            
+            audio.Stop();
         }
 
         private void btnMusicOff_Click(object sender, EventArgs e)

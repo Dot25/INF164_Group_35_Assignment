@@ -113,6 +113,7 @@
             this.Controls.Add(this.btnInstructions);
             this.Controls.Add(this.btnPlay);
             this.Name = "pnlWelcomeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome Form";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();

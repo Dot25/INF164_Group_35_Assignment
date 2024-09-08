@@ -17,7 +17,7 @@ namespace Group_Project.Class
         {
             _name = name;
             _totalExp = totalExp;
-            //_blocksBroken = blockBroken;
+            _blocksBroken = blockBroken;
         }
 
         public string Name

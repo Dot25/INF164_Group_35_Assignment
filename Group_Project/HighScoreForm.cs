@@ -32,13 +32,36 @@ namespace Group_Project
         {
             GameClass obj = new GameClass();
             obj.ReadFromFile("Records", recordsList);
+            
             dgvHighScores.DataSource = recordsList;
-
+            
         }
 
         private void btnBestPlayer_Click(object sender, EventArgs e)
         {
-           // recordsList.
+            string bestPlayer = recordsList[0].Name;
+            int bestScore = recordsList[0].TotalExp;
+           for(int i = 0; i < recordsList.Count; ++i)
+           {
+                if (recordsList[i].TotalExp > bestScore) 
+                {
+                    bestScore = recordsList[i].TotalExp;
+                    bestPlayer = recordsList[i].Name;
+                }
+           }
+            MessageBox.Show("The best player is (" + bestPlayer + ") with a top Exp of : " + bestScore);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            pnlWelcomeForm Form1 = new pnlWelcomeForm();
+            Form1.ShowDialog();
         }
     }
 }

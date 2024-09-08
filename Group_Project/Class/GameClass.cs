@@ -23,10 +23,10 @@ namespace Group_Project.Class
         private string _filepath;
         private string _correctWord;
         private int picture = 0;
-        private int[] exp = new int[10] {3,6,9,12,15,18,21,24,27,30};
+        private int[] exp = new int[10] { 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 };
         private int totalExp = 0;
         private int durability = 5;
-        private int numBlocksBroken = 0;
+        private int _numBlocksBroken = 0;
         public string _name;
 
         public GameClass()
@@ -44,7 +44,7 @@ namespace Group_Project.Class
                     while ((line = reader.ReadLine()) != null)
                     {
                         _words.Add(line.Trim());
-                        
+
                     }
                 }
                 reader.Close();
@@ -61,9 +61,9 @@ namespace Group_Project.Class
             int len = _correctWord.Length;
             Random random = new Random();
             int switchPos = random.Next(1, len);
-            for(int i = 0; i < len; ++i)
+            for (int i = 0; i < len; ++i)
             {
-                if(i == switchPos)
+                if (i == switchPos)
                 {
                     _alteredWord += '_';
                 }
@@ -71,14 +71,14 @@ namespace Group_Project.Class
                 {
                     _alteredWord += _correctWord[i];
                 }
-                
+
             }
             return _alteredWord;
         }
 
         public bool equal(string input)
         {
-            if(input.ToUpper().Equals(_correctWord.ToUpper()))
+            if (input.ToUpper().Equals(_correctWord.ToUpper()))
             {
                 return true;
             }
@@ -91,14 +91,16 @@ namespace Group_Project.Class
         public void addExp()
         {
             totalExp += exp[picture];
-            ++numBlocksBroken;
         }
 
         public int getBlocksBroken()
         {
-            return numBlocksBroken;
+            return _numBlocksBroken;
         }
-
+        public void setBlocksBroken()
+        {
+            ++_numBlocksBroken;
+        }
         public int getExp()
         {
             return totalExp;

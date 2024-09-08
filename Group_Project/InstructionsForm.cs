@@ -38,5 +38,11 @@ namespace Group_Project
                 MessageBox.Show($"An error occurred while loading the instructions: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            
+        }
     }
 }

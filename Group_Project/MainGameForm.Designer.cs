@@ -225,6 +225,7 @@
             this.Controls.Add(this.lblWord);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainGameForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainGameForm";
             ((System.ComponentModel.ISupportInitialize)(this.pbxOre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAxe)).EndInit();

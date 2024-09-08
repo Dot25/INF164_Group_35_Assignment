@@ -40,6 +40,7 @@ namespace Group_Project
             if(obj.equal(txtInput.Text) == true)
             {
                 obj.addExp();
+                obj.setBlocksBroken();
                 lblExp.Text = "EXP Gained: " + obj.getExp().ToString();
                 lblWord.Text = obj.GetRandomWord();
                 pbxOre.Image = imageListBlocks.Images[obj.getRandomBlock()];
