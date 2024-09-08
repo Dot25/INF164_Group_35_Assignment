@@ -36,9 +36,10 @@ namespace Group_Project
         
         private void btnMine_Click(object sender, EventArgs e)
         {
-            //Call getRandomBlock and getRandomWord
+            //Checks if the player input matches the correct word
             if(obj.equal(txtInput.Text) == true)
             {
+                //Updates exp and blocksbroken
                 obj.addExp();
                 obj.setBlocksBroken();
                 lblExp.Text = "EXP Gained: " + obj.getExp().ToString();
@@ -47,23 +48,32 @@ namespace Group_Project
             }
             else
             {
-                //MessageBox.Show("0");
+                //Removes durability (attempts)
                 obj.removeDurability();
+
+                //Sets a new word and updates the labels
                 lblWord.Text = obj.GetRandomWord();
                 lblDurability.Text = "Durability: " + obj.getDurability().ToString() + "/5";
+
+                //Sets the new image
                 pbxOre.Image = imageListBlocks.Images[obj.getRandomBlock()];
+
+                //Checks if the players still has attempts left
                 if(obj.getDurability() == 0)
                 {
-                    //obj.endGame();
+                    //Adds the details to the records list and serializes it
                     recordsList.Add(new Record(obj.getName(), obj.getExp(), obj.getBlocksBroken()));
                     obj.WriteToFile("Records", recordsList);
+
+                    //Closes the form
                     this.Hide();
                     HighScoreForm newHighScoreForm = new HighScoreForm();
                     newHighScoreForm.ShowDialog();
                 }
             }
+            //Clears the input
             txtInput.Clear();
-            //obj.getRandomBlock();
+            
         }
 
         private void tmrCountdown_Tick(object sender, EventArgs e)
@@ -72,18 +82,11 @@ namespace Group_Project
            lblTimeRemaining.Text = "Time Remaining: " + (60 - timeElapsed).ToString();
            if(timeElapsed == 60)
            {
-
-                // Retrieve the experience from lblExperience
-                //int experience = obj.getExp();
-
-                // Pass the name and experience to the game class
-                
-                //obj.setExperience(experience);
-                //int blocksBroken = 1;
-
-                //obj.endGame();
+                //Adds the details to the records list and serializes it
                 recordsList.Add(new Record(obj.getName(), obj.getExp(), obj.getBlocksBroken()));
                 obj.WriteToFile("Records", recordsList);
+
+                //Closes the form
                 this.Hide();
                 HighScoreForm newHighScoreForm = new HighScoreForm();
                 newHighScoreForm.ShowDialog();
@@ -102,6 +105,7 @@ namespace Group_Project
         
         private void btnName_Click(object sender, EventArgs e)
         {
+            //Switches the interface from get name to the games and starts the game timer
             tmrCountdown.Start();
             obj.setName(txtName.Text);
             lblExp.Visible = true;
