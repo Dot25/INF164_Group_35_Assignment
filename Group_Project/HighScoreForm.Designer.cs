@@ -68,6 +68,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HighScoreForm";
             this.Text = "HighScoreForm";
+            this.Load += new System.EventHandler(this.HighScoreForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHighScores)).EndInit();
             this.ResumeLayout(false);
 

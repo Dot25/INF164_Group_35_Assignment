@@ -41,6 +41,9 @@
             this.lblDurability = new System.Windows.Forms.Label();
             this.lblExp = new System.Windows.Forms.Label();
             this.lblTimeRemaining = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.btnName = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxOre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAxe)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +68,7 @@
             this.lblWord.Size = new System.Drawing.Size(205, 50);
             this.lblWord.TabIndex = 0;
             this.lblWord.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblWord.Visible = false;
             // 
             // btnMine
             // 
@@ -75,6 +79,7 @@
             this.btnMine.TabIndex = 1;
             this.btnMine.Text = "Mine";
             this.btnMine.UseVisualStyleBackColor = true;
+            this.btnMine.Visible = false;
             this.btnMine.Click += new System.EventHandler(this.btnMine_Click);
             // 
             // txtInput
@@ -84,6 +89,7 @@
             this.txtInput.Name = "txtInput";
             this.txtInput.Size = new System.Drawing.Size(193, 22);
             this.txtInput.TabIndex = 2;
+            this.txtInput.Visible = false;
             this.txtInput.TextChanged += new System.EventHandler(this.txtInput_TextChanged);
             // 
             // pbxOre
@@ -98,6 +104,7 @@
             this.pbxOre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxOre.TabIndex = 3;
             this.pbxOre.TabStop = false;
+            this.pbxOre.Visible = false;
             // 
             // pbxAxe
             // 
@@ -110,6 +117,7 @@
             this.pbxAxe.Size = new System.Drawing.Size(112, 103);
             this.pbxAxe.TabIndex = 4;
             this.pbxAxe.TabStop = false;
+            this.pbxAxe.Visible = false;
             // 
             // imageListBlocks
             // 
@@ -141,6 +149,7 @@
             this.lblDurability.Size = new System.Drawing.Size(146, 25);
             this.lblDurability.TabIndex = 5;
             this.lblDurability.Text = "Durability: 5/5";
+            this.lblDurability.Visible = false;
             // 
             // lblExp
             // 
@@ -152,6 +161,7 @@
             this.lblExp.Size = new System.Drawing.Size(143, 25);
             this.lblExp.TabIndex = 6;
             this.lblExp.Text = "EXP Gained: \r\n";
+            this.lblExp.Visible = false;
             this.lblExp.Click += new System.EventHandler(this.lblExp_Click);
             // 
             // lblTimeRemaining
@@ -164,6 +174,36 @@
             this.lblTimeRemaining.Size = new System.Drawing.Size(235, 25);
             this.lblTimeRemaining.TabIndex = 7;
             this.lblTimeRemaining.Text = "Time Remaining: 00:00";
+            this.lblTimeRemaining.Visible = false;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(296, 123);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(170, 25);
+            this.lblName.TabIndex = 8;
+            this.lblName.Text = "Enter your name";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(282, 167);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(193, 22);
+            this.txtName.TabIndex = 9;
+            // 
+            // btnName
+            // 
+            this.btnName.Location = new System.Drawing.Point(315, 213);
+            this.btnName.Name = "btnName";
+            this.btnName.Size = new System.Drawing.Size(136, 56);
+            this.btnName.TabIndex = 10;
+            this.btnName.Text = "Confirm";
+            this.btnName.UseVisualStyleBackColor = true;
+            this.btnName.Click += new System.EventHandler(this.btnName_Click);
             // 
             // MainGameForm
             // 
@@ -171,6 +211,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnName);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblTimeRemaining);
             this.Controls.Add(this.lblExp);
             this.Controls.Add(this.lblDurability);
@@ -202,5 +245,8 @@
         private System.Windows.Forms.Label lblDurability;
         private System.Windows.Forms.Label lblExp;
         private System.Windows.Forms.Label lblTimeRemaining;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Button btnName;
     }
 }

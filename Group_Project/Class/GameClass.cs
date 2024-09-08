@@ -8,6 +8,8 @@ using System.Collections;
 using System.IO;
 using System.Windows.Forms;
 using Group_Project.Properties;
+using System.IO.Pipes;
+using Microsoft.VisualBasic;
 
 
 namespace Group_Project.Class
@@ -24,6 +26,7 @@ namespace Group_Project.Class
         private int totalExp = 0;
         private int durability = 5;
         private int numBlocksBroken = 0;
+        private string _name;
 
         public GameClass()
         {
@@ -100,6 +103,11 @@ namespace Group_Project.Class
             return durability;
         }
 
+        public void getName(string name)
+        {
+            _name = name;
+        }
+
         public void removeDurability()
         {
             if(durability > 0) 
@@ -119,7 +127,23 @@ namespace Group_Project.Class
             return HideLetters(_correctWord);
         }
 
-        
+        public void endGame()
+        {
+            try
+            {
+                using (StreamWriter writeTo = new StreamWriter("Resources/Records.txt"))
+                {
+                    writeTo.WriteLine(_name + "#" + totalExp.ToString() + "#" + numBlocksBroken.ToString());
+                }
+
+             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading words from file: " + ex.Message);
+            }
+        }
+
+
         public int getRandomBlock()
         {
             Random random = new Random();

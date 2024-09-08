@@ -23,7 +23,7 @@ namespace Group_Project
             lblWord.Text = obj.GetRandomWord();
             pbxOre.Image = imageListBlocks.Images[obj.getRandomBlock()];
             pbxOre.SizeMode = PictureBoxSizeMode.StretchImage;
-            tmrCountdown.Start();
+            
         }
         
         
@@ -48,6 +48,7 @@ namespace Group_Project
                 pbxOre.Image = imageListBlocks.Images[obj.getRandomBlock()];
                 if(obj.getDurability() == 0)
                 {
+                    obj.endGame();
                     this.Hide();
                     HighScoreForm newHighScoreForm = new HighScoreForm();
                     newHighScoreForm.ShowDialog();
@@ -63,6 +64,7 @@ namespace Group_Project
            lblTimeRemaining.Text = "Time Remaining: " + (60 - timeElapsed).ToString();
            if(timeElapsed == 60)
            {
+                obj.endGame();
                 this.Hide();
                 HighScoreForm newHighScoreForm = new HighScoreForm();
                 newHighScoreForm.ShowDialog();
@@ -77,6 +79,22 @@ namespace Group_Project
         private void lblExp_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnName_Click(object sender, EventArgs e)
+        {
+            tmrCountdown.Start();
+            lblExp.Visible = true;
+            lblName.Visible = false;
+            lblDurability.Visible = true;
+            lblTimeRemaining.Visible = true;
+            btnMine.Visible = true;
+            btnName.Visible = false;
+            txtInput.Visible = true;
+            txtName.Visible = false;
+            pbxAxe.Visible = true;
+            pbxOre.Visible = true;
+            lblWord.Visible = true;
         }
     }
 }

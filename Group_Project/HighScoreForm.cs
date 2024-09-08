@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Group_Project.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,16 @@ namespace Group_Project
             InitializeComponent();
         }
 
+  
 
         private void dgvHighScores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+        BindingList<Record> recordsList = new BindingList<Record>();
+        private void HighScoreForm_Load(object sender, EventArgs e)
+        {
+            //Record item = new Record();
 
         }
     }

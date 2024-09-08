@@ -168,6 +168,9 @@
     <Content Include="Images\sand.jpg" />
     <Content Include="Images\stone.jpg" />
     <Content Include="Images\welcome background.jpg" />
+    <Content Include="Resources\Records.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\Cat.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
